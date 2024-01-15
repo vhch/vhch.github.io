@@ -1,29 +1,47 @@
 {
-  "name": "jekyll-theme-chirpy",
-  "version": "5.4.0",
-  "description": "A minimal, responsive, and powerful Jekyll theme for presenting professional writing.",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/cotes2020/jekyll-theme-chirpy.git"
-  },
-  "author": "Cotes Chung",
+  "name": "just-the-docs",
+  "version": "0.3.3",
+  "description": "A modern Jekyll theme for documentation",
+  "repository": "just-the-docs/just-the-docs",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/cotes2020/jekyll-theme-chirpy/issues"
-  },
-  "homepage": "https://github.com/cotes2020/jekyll-theme-chirpy#readme",
-  "scripts": {
-    "test": "npx stylelint _sass/**/*.scss",
-    "fixlint": "npx stylelint _sass/**/*.scss --fix"
-  },
+  "bugs": "https://github.com/just-the-docs/just-the-docs/issues",
   "devDependencies": {
-    "gulp": "^4.0.2",
-    "gulp-concat": "^2.6.1",
-    "gulp-insert": "^0.5.0",
-    "gulp-rename": "^2.0.0",
-    "gulp-uglify": "^3.0.2",
-    "stylelint": "^14.14.0",
-    "stylelint-config-standard-scss": "^5.0.0",
-    "uglify-js": "^3.14.3"
+    "npm-run-all": "^4.1.5",
+    "prettier": "^3.1.1",
+    "stylelint": "^15.11.0",
+    "stylelint-config-standard-scss": "^11.1.0"
+  },
+  "scripts": {
+    "lint": "npm-run-all --parallel --continue-on-error lint:*",
+    "lint:css": "stylelint '**/*.scss'",
+    "lint:formatting": "prettier --check '**/*.{scss,js,json}'",
+    "format": "prettier --write '**/*.{scss,js,json}'",
+    "test": "npm run lint"
+  },
+  "stylelint": {
+    "ignoreFiles": [
+      "assets/css/just-the-docs-default.scss",
+      "assets/css/just-the-docs-light.scss",
+      "assets/css/just-the-docs-dark.scss",
+      "_sass/vendor/**/*.scss"
+    ],
+    "extends": [
+      "stylelint-config-standard-scss"
+    ],
+    "rules": {
+      "alpha-value-notation": null,
+      "at-rule-empty-line-before": null,
+      "color-function-notation": null,
+      "media-feature-range-notation": "prefix",
+      "no-descending-specificity": null,
+      "scss/no-global-function-names": null
+    }
+  },
+  "prettier": {
+    "endOfLine": "lf",
+    "semi": false,
+    "singleQuote": false,
+    "tabWidth": 2,
+    "trailingComma": "es5"
   }
 }

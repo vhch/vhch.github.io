@@ -1,71 +1,41 @@
 ---
-layout: compress
-# Default layout
+layout: table_wrappers
 ---
 
 <!DOCTYPE html>
 
-{% include assets-origin.html %}
+<html lang="{{ site.lang | default: 'en-US' }}">
+{% include head.html %}
+<body>
+  <a class="skip-to-main" href="#main-content">Skip to main content</a>
+  {% include icons/icons.html %}
+  {% include components/sidebar.html %}
+  <div class="main" id="top">
+    {% include components/header.html %}
+    <div class="main-content-wrap">
+      {% include components/breadcrumbs.html %}
+      <div id="main-content" class="main-content">
+        <main>
+          {% if site.heading_anchors != false %}
+            {% include vendor/anchor_headings.html html=content beforeHeading="true" anchorBody="<svg viewBox=\"0 0 16 16\" aria-hidden=\"true\"><use xlink:href=\"#svg-link\"></use></svg>" anchorClass="anchor-heading" anchorAttrs="aria-labelledby=\"%html_id%\"" %}
+          {% else %}
+            {{ content }}
+          {% endif %}
 
-{% capture prefer_mode %}
-  {% if site.theme_mode %}
-    data-mode="{{ site.theme_mode }}"
+          {% if page.has_children == true and page.has_toc != false %}
+            {% include components/children_nav.html %}
+          {% endif %}
+        </main>
+        {% include components/footer.html %}
+      </div>
+    </div>
+    {% if site.search_enabled != false %}
+      {% include components/search_footer.html %}
+    {% endif %}
+  </div>
+
+  {% if site.mermaid %}
+    {% include components/mermaid.html %}
   {% endif %}
-{% endcapture %}
-
-<!-- `site.alt_lang` can specify a language different from the UI -->
-<html lang="{{ site.alt_lang | default: site.lang }}"{{ prefer_mode }}>
-
-  {% include head.html %}
-
-  <body data-spy="scroll" data-target="#toc" data-topbar-visible="true">
-
-    {% include sidebar.html %}
-
-    {% include topbar.html %}
-
-    <div id="main-wrapper" class="d-flex justify-content-center">
-      <div id="main" class="container pl-xl-4 pr-xl-4">
-        {{ content }}
-      </div>
-
-      {% include search-results.html %}
-
-    </div> <!-- #main-wrapper -->
-
-    {% include footer.html %}
-
-    {% if page.mermaid %}
-      {% include mermaid.html %}
-    {% endif %}
-
-    <div id="mask"></div>
-
-    <a id="back-to-top" href="#" aria-label="back-to-top" class="btn btn-lg btn-box-shadow" role="button">
-      <i class="fas fa-angle-up"></i>
-    </a>
-
-    {% if site.pwa.enabled %}
-      <div id="notification" class="toast" role="alert" aria-live="assertive" aria-atomic="true"
-        data-animation="true" data-autohide="false">
-        <div class="toast-header">
-          <button type="button" class="ml-2 ml-auto close" data-dismiss="toast" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="toast-body text-center pt-0">
-          <p class="pl-2 pr-2 mb-3">{{ site.data.locales[site.lang].notification.update_found }}</p>
-          <button type="button" class="btn btn-primary" aria-label="Update">
-            {{ site.data.locales[site.lang].notification.update }}
-          </button>
-        </div>
-      </div>
-    {% endif %}
-
-    {% include search-loader.html %}
-
-    {% include js-selector.html %}
-
-  </body>
-
+</body>
 </html>

@@ -1,24 +1,8 @@
-# frozen_string_literal: true
-
 source "https://rubygems.org"
-
 gemspec
 
-group :test do
-  gem "html-proofer", "~> 3.18"
-end
+gem "jekyll-github-metadata", ">= 2.15"
 
-# Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem
-# and associated library.
-install_if -> { RUBY_PLATFORM =~ %r!mingw|mswin|java! } do
-  gem "tzinfo", "~> 1.2"
-  gem "tzinfo-data"
-end
+gem "jekyll-include-cache", group: :jekyll_plugins
 
-# Performance-booster for watching directories on Windows
-gem "wdm", "~> 0.1.1", :install_if => Gem.win_platform?
-
-# Lock jekyll-sass-converter to 2.x on Linux-musl
-install_if -> { RUBY_PLATFORM =~ /linux-musl/ } do
-  gem "jekyll-sass-converter", "~> 2.0"
-end
+gem "html-proofer", "~> 5.0", :group => :development

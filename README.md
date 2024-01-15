@@ -1,106 +1,110 @@
-<div align="center">
+<p align="right">
+    <a href="https://badge.fury.io/rb/just-the-docs"><img src="https://badge.fury.io/rb/just-the-docs.svg" alt="Gem version"></a> <a href="https://github.com/just-the-docs/just-the-docs/actions/workflows/ci.yml"><img src="https://github.com/just-the-docs/just-the-docs/actions/workflows/ci.yml/badge.svg" alt="CI Build status"></a> <a href="https://app.netlify.com/sites/just-the-docs/deploys"><img src="https://api.netlify.com/api/v1/badges/9dc0386d-c2a4-4077-ad83-f02c33a6c0ca/deploy-status" alt="Netlify Status"></a>
+</p>
+<br><br>
+<p align="center">
+    <h1 align="center">Just the Docs</h1>
+    <p align="center">A modern, highly customizable, and responsive Jekyll theme for documentation with built-in search.<br>Easily hosted on GitHub Pages with few dependencies.</p>
+    <p align="center"><strong><a href="https://just-the-docs.com/">See it in action!</a></strong></p>
+    <br><br><br>
+</p>
 
-  # Chirpy Jekyll Theme
+<p align="center">A video walkthrough of various Just the Docs features</p>
 
-  A minimal, responsive, and powerful Jekyll theme for presenting professional writing.
+https://user-images.githubusercontent.com/85418632/211225192-7e5d1116-2f4f-4305-bb9b-437fe47df071.mp4
 
-  [![Gem Version](https://img.shields.io/gem/v/jekyll-theme-chirpy?color=brightgreen)](https://rubygems.org/gems/jekyll-theme-chirpy)
-  [![CI](https://github.com/cotes2020/jekyll-theme-chirpy/actions/workflows/ci.yml/badge.svg)](https://github.com/cotes2020/jekyll-theme-chirpy/actions/workflows/ci.yml)
-  [![Codacy Badge](https://app.codacy.com/project/badge/Grade/4e556876a3c54d5e8f2d2857c4f43894)](https://www.codacy.com/gh/cotes2020/jekyll-theme-chirpy/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=cotes2020/jekyll-theme-chirpy&amp;utm_campaign=Badge_Grade)
-  [![GitHub license](https://img.shields.io/github/license/cotes2020/jekyll-theme-chirpy.svg)](https://github.com/cotes2020/jekyll-theme-chirpy/blob/master/LICENSE)
-  [![996.icu](https://img.shields.io/badge/link-996.icu-%23FF4D5B.svg)](https://996.icu)
+## Installation
 
-  [**Live Demo →**](https://cotes2020.github.io/chirpy-demo)
+### Use the template
 
-  [![Devices Mockup](https://chirpy-img.netlify.app/commons/devices-mockup.png)](https://cotes2020.github.io/chirpy-demo)
+The [Just the Docs Template] provides the simplest, quickest, and easiest way to create a new website that uses the Just the Docs theme. To get started with creating a site, just click "[use the template]"!
 
-</div>
+Note: To use the theme, you do ***not*** need to clone or fork the [Just the Docs repo]! You should do that only if you intend to browse the theme docs locally, contribute to the development of the theme, or develop a new theme based on Just the Docs.
 
-## Features
+You can easily set the site created by the template to be published on [GitHub Pages] – the [template README] file explains how to do that, along with other details.
 
-- Dark/Light Theme Mode
-- Localized UI language
-- Pinned Posts
-- Hierarchical Categories
-- Trending Tags
-- Table of Contents
-- Last Modified Date of Posts
-- Syntax Highlighting
-- Mathematical Expressions
-- Mermaid Diagram & Flowchart
-- Dark/Light Mode Images
-- Embed Videos
-- Disqus/Utterances/Giscus Comments
-- Search
-- Atom Feeds
-- Google Analytics
-- Page Views Reporting
-- SEO & Performance Optimization
+If [Jekyll] is installed on your computer, you can also build and preview the created site *locally*. This lets you test changes before committing them, and avoids waiting for GitHub Pages.[^2] And you will be able to deploy your local build to a different platform than GitHub Pages.
 
-## Quick Start
+More specifically, the created site:
 
-Before starting, please follow the instructions in the [Jekyll Docs](https://jekyllrb.com/docs/installation/) to complete the installation of `Ruby`, `RubyGems`, `Jekyll`, and `Bundler`. In addition, [Git](https://git-scm.com/) is also required to be installed.
+- uses a gem-based approach, i.e. uses a `Gemfile` and loads the `just-the-docs` gem
+- uses the [GitHub Pages / Actions workflow] to build and publish the site on GitHub Pages
 
-### Step 1. Creating a New Site
+Other than that, you're free to customize sites that you create with the template, however you like. You can easily change the versions of `just-the-docs` and Jekyll it uses, as well as adding further plugins.
 
-Create a new repository from the [**Chirpy Starter**](https://github.com/cotes2020/chirpy-starter/generate) and name it `<GH_USERNAME>.github.io`, where `GH_USERNAME` represents your GitHub username.
+### Use RubyGems
 
-### Step 2. Installing Dependencies
+Alternatively, you can install the theme as a Ruby Gem, without creating a new site.
 
-Before running for the first time, go to the root directory of your site, and install dependencies as follows:
+Add this line to your Jekyll site's `Gemfile`:
 
-```console
-$ bundle
+```ruby
+gem "just-the-docs"
 ```
 
-### Step 3. Running Local Server
+And add this line to your Jekyll site's `_config.yml`:
 
-Run the following command in the root directory of the site:
-
-```console
-$ bundle exec jekyll s
+```yaml
+theme: just-the-docs
 ```
 
-Or run with Docker:
+And then execute:
 
-```console
-$ docker run -it --rm \
-    --volume="$PWD:/srv/jekyll" \
-    -p 4000:4000 jekyll/jekyll \
-    jekyll serve
-```
+    $ bundle
 
-After a while, navigate to the site at <http://localhost:4000>.
+Or install it yourself as:
 
-## Documentation
+    $ gem install just-the-docs
 
-For more details on usage, please refer to the tutorial on the [demo website](https://cotes2020.github.io/chirpy-demo/) / [wiki](https://github.com/cotes2020/jekyll-theme-chirpy/wiki). Note that the tutorial is based on the [latest release](https://github.com/cotes2020/jekyll-theme-chirpy/releases/latest), and the features of the default branch are usually ahead of the documentation.
+Alternatively, you can run it inside Docker while developing your site
+
+    $ docker-compose up
+
+## Usage
+
+[View the documentation][Just the Docs] for usage information.
 
 ## Contributing
 
-Welcome to report bugs, improve code quality or submit a new feature. For more information, see [contributing guidelines](.github/CONTRIBUTING.md).
+Bug reports, proposals of new features, and pull requests are welcome on GitHub at https://github.com/just-the-docs/just-the-docs. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
-## Credits
+### Submitting code changes:
 
-This theme is mainly built with [Jekyll](https://jekyllrb.com/) ecosystem, [Bootstrap](https://getbootstrap.com/), [Font Awesome](https://fontawesome.com/) and some other wonderful tools (their copyright information can be found in the relevant files). The avatar and favicon design come from [Clipart Max](https://www.clipartmax.com/middle/m2i8b1m2K9Z5m2K9_ant-clipart-childrens-ant-cute/).
+- Submit an [Issue](https://github.com/just-the-docs/just-the-docs/issues) that motivates the changes, using the appropriate template
+- Discuss the proposed changes with other users and the maintainers
+- Open a [Pull Request](https://github.com/just-the-docs/just-the-docs/pulls)
+- Ensure all CI tests pass
+- Provide instructions to check the effect of the changes
+- Await code review
 
-:tada: Thanks to all the volunteers who contributed to this project, their GitHub IDs are on [this list](https://github.com/cotes2020/jekyll-theme-chirpy/graphs/contributors). Also, I won't forget those guys who submitted the issues or unmerged PR because they reported bugs, shared ideas, or inspired me to write more readable documentation.
+### Design and development principles of this theme:
 
-Last but not least, thank [JetBrains][jb] for providing the OSS development license.
+1. As few dependencies as possible
+2. No build script needed
+3. First class mobile experience
+4. Make the content shine
 
-## Sponsoring
+## Development
 
-If you like this theme or find it helpful, please consider sponsoring me, because it will encourage and help me better maintain the project, I will be very grateful!
+To set up your environment to develop this theme: fork this repo, the run `bundle install` from the root directory.
 
-[![Ko-fi](https://img.shields.io/badge/-Buy%20Me%20a%20Coffee-ff5f5f?logo=ko-fi&logoColor=white)](https://ko-fi.com/coteschung)
-[![Wechat Pay](https://img.shields.io/badge/-Tip%20Me%20on%20WeChat-brightgreen?logo=wechat&logoColor=white)][cn-donation]
-[![Alipay](https://img.shields.io/badge/-Tip%20Me%20on%20Alipay-blue?logo=alipay&logoColor=white)][cn-donation]
+A modern [devcontainer configuration](https://code.visualstudio.com/docs/remote/containers) for VSCode is included.
+
+Your theme is set up just like a normal Jekyll site! To test your theme, run `bundle exec jekyll serve` and open your browser at `http://localhost:4000`. This starts a Jekyll server using your theme. Add pages, documents, data, etc. like normal to test your theme's contents. As you make modifications to your theme and to your content, your site will regenerate and you should see the changes in the browser after a refresh, just like normal.
+
+When this theme is released, only the files in `_layouts`, `_includes`, and `_sass` tracked with Git will be included in the gem.
 
 ## License
 
-This work is published under [MIT](https://github.com/cotes2020/jekyll-theme-chirpy/blob/master/LICENSE) License.
+The theme is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
 
-<!-- ReadMe links -->
+[^2]: [It can take up to 10 minutes for changes to your site to publish after you push the changes to GitHub](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/creating-a-github-pages-site-with-jekyll#creating-your-site).
 
-[jb]: https://www.jetbrains.com/?from=jekyll-theme-chirpy
-[cn-donation]: https://sponsor.cotes.page/
+[Jekyll]: https://jekyllrb.com
+[Just the Docs Template]: https://just-the-docs.github.io/just-the-docs-template/
+[Just the Docs]: https://just-the-docs.com
+[Just the Docs repo]: https://github.com/just-the-docs/just-the-docs
+[GitHub Pages]: https://pages.github.com/
+[Template README]: https://github.com/just-the-docs/just-the-docs-template/blob/main/README.md
+[GitHub Pages / Actions workflow]: https://github.blog/changelog/2022-07-27-github-pages-custom-github-actions-workflows-beta/
+[use the template]: https://github.com/just-the-docs/just-the-docs-template/generate
