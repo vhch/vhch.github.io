@@ -1,0 +1,241 @@
+
+
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <id>http://localhost:4000/</id>
+  <title>vhch</title>
+  <subtitle>about computer science.</subtitle>
+  <updated>2024-01-27T00:14:14+09:00</updated>
+  <author>
+    <name>vhch</name>
+    <uri>http://localhost:4000/</uri>
+  </author>
+  <link rel="self" type="application/atom+xml" href="http://localhost:4000/feed.xml"/>
+  <link rel="alternate" type="text/html" hreflang="en"
+    href="http://localhost:4000/"/>
+  <generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator>
+  <rights> © 2024 vhch </rights>
+  <icon>/assets/img/favicons/favicon.ico</icon>
+  <logo>/assets/img/favicons/favicon-96x96.png</logo>
+
+
+  
+  <entry>
+    <title>(논문 리뷰) UniDrop A Simple yet Effective Technique to Improve Transformer without Extra Cost</title>
+    <link href="http://localhost:4000/posts/unidrop/" rel="alternate" type="text/html" title="(논문 리뷰) UniDrop A Simple yet Effective Technique to Improve Transformer without Extra Cost" />
+    <published>2023-03-14T00:00:00+09:00</published>
+  
+    <updated>2023-03-14T00:00:00+09:00</updated>
+  
+    <id>http://localhost:4000/posts/unidrop/</id>
+    <content src="http://localhost:4000/posts/unidrop/" />
+    <author>
+      <name>vhch</name>
+    </author>
+
+  
+    
+    <category term="nlp" />
+    
+    <category term="translation" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      
+
+1 Introduction
+
+연구 필요성
+
+
+  Over-parameterization and overfitting
+    
+      Transformer의 다양한 훈련 전략 나옴
+      위의 전략들이 효과적임에도 overfitting의 위험성 존재
+      overfitting을 피하기 위해서 Regularization methods 제안됨
+        
+          weight decay
+          data augmentation
+          dropout
+          parameter sharing
+        
+      
+    
+  
+  다양한 dropout techniques 만으로 SOTA 달성 가능한가?
+    
+      dropout은 추가적인 ...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>(논문 리뷰) Bi-SimCut A Simple Strategy for Boosting Neural Machine Translation</title>
+    <link href="http://localhost:4000/posts/bisimcut/" rel="alternate" type="text/html" title="(논문 리뷰) Bi-SimCut A Simple Strategy for Boosting Neural Machine Translation" />
+    <published>2023-03-14T00:00:00+09:00</published>
+  
+    <updated>2023-03-14T00:00:00+09:00</updated>
+  
+    <id>http://localhost:4000/posts/bisimcut/</id>
+    <content src="http://localhost:4000/posts/bisimcut/" />
+    <author>
+      <name>vhch</name>
+    </author>
+
+  
+    
+    <category term="nlp" />
+    
+    <category term="translation" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      Abstract
+Bi-Simcut은 간단하지만 효과적인  training strategy 입니다. 이것은 두 단계로 구성 됩니다. 1. bidirectional pretraining 2. unidirectional finetuning. 두 단계 모두 original, cutoff sentence paris간의 output distributions의 consistency를 유지하게 하는 정규화 방법 SimCut을 적용 합니다. 이떄 back-translation으로 생성한 extra dataset이나 large-scale pretrained model은 사용하지 않고, Bi-SumCut은 강력한 translation performacne를 달성 하였습니다. Sim-Cut은 새로운 방법이 아니고, Cut-...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>(논문 리뷰) A Simple but Tough-to-Beat Data Augmentation Approach for Natural Language Understanding and Generation</title>
+    <link href="http://localhost:4000/posts/cutoff/" rel="alternate" type="text/html" title="(논문 리뷰) A Simple but Tough-to-Beat Data Augmentation Approach for Natural Language Understanding and Generation" />
+    <published>2023-03-09T00:00:00+09:00</published>
+  
+    <updated>2023-03-09T00:00:00+09:00</updated>
+  
+    <id>http://localhost:4000/posts/cutoff/</id>
+    <content src="http://localhost:4000/posts/cutoff/" />
+    <author>
+      <name>vhch</name>
+    </author>
+
+  
+    
+    <category term="nlp" />
+    
+    <category term="translation" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      1 Introduction
+
+연구 필요성
+massive unlabeld text corpora로 self-supervised training한 Large-scale language models로 pre-trained함. 특정한 task에 적용 하려면 task-specific data에 fine tunning 해야 함. 이때 거대한 model parameters의 수와 제한된 task-specific data로 인해서 fine tunning시 성능 하락과 일반화 능력이 떨어짐
+
+이러한 문제점을 피하기 위해서 adversarial training objectives가 제안됨. 구체적으로 label preserving perturbations은 word embedding layer선에서 수행됨. 이는 inp...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>(논문 리뷰) R-Drop, Regularized Dropout for Neural Networks</title>
+    <link href="http://localhost:4000/posts/rdrop/" rel="alternate" type="text/html" title="(논문 리뷰) R-Drop, Regularized Dropout for Neural Networks" />
+    <published>2023-02-01T00:00:00+09:00</published>
+  
+    <updated>2023-02-01T00:00:00+09:00</updated>
+  
+    <id>http://localhost:4000/posts/rdrop/</id>
+    <content src="http://localhost:4000/posts/rdrop/" />
+    <author>
+      <name>vhch</name>
+    </author>
+
+  
+    
+    <category term="nlp" />
+    
+    <category term="translation" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      Abstract
+Dropout은 deep neural networks을 train 할 때 강력하고 넓은 범위에  regularize 할 수 있는 방법 입니다. 하지만 random 적인 요소로 인해서 train과 inference 과정 사이에 inconsistency가 있을 수 있습니다. 본 논문에서는 regularize dropout을 위한 간단한 consistency training strategy인 R-Drop을 소개 합니다. Dropout을 통해서 생성된 submodels의 output distributions을 consistent하게 합니다. 구체적으로 dropout을 통해서 생성된 두개의 sub models sampled을 양방향 KL-divergence을 통해서 output distribut...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>(논문 리뷰) BERT, MBERT, or BIBERT? A Study on Contextualized Embeddings for Neural Machine Translation</title>
+    <link href="http://localhost:4000/posts/bibert/" rel="alternate" type="text/html" title="(논문 리뷰) BERT, MBERT, or BIBERT? A Study on Contextualized Embeddings for Neural Machine Translation" />
+    <published>2023-01-19T00:00:00+09:00</published>
+  
+    <updated>2023-01-19T00:00:00+09:00</updated>
+  
+    <id>http://localhost:4000/posts/bibert/</id>
+    <content src="http://localhost:4000/posts/bibert/" />
+    <author>
+      <name>vhch</name>
+    </author>
+
+  
+    
+    <category term="nlp" />
+    
+    <category term="translation" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      1. Introduction
+Pre-trained language models들은 large-scale unlabeled data에서 훈련합니다. ELMo, BERT, XLNET, XLM 등이 존재하고 다양한 NLP tasks에서 뛰어난 성능을 보이고 있습니다. 뛰어난 성능을 보이는 BERT의 pre-trained 모델을 translation model에 활용하는 몇가지의 예가 존재합니다.
+
+
+  Model의 Encoder 부분을 random하게 초기화 하는 대신 pre trained된 BERT의 parameter로 초기화 하는 방법
+  BERT의 output을 encoder의 각 layer에 활용하는 방법
+
+
+이 논문에서는 간단하게 pre trained language model의 output을 NM...
+    </summary>
+  
+
+  </entry>
+
+</feed>
+
+
